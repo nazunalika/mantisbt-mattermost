@@ -94,6 +94,19 @@ print_manage_menu( 'manage_plugin_page.php' );
 
   <tr>
     <td class="category">
+      <?php echo plugin_lang_get( 'bot_account' )?>
+    </td>
+    <td colspan="2">
+      <p>
+        Turns on the ability to use a bot account rather than a webhook.
+      </p>
+      <input type="checkbox" name="bot_account" <?php if (plugin_config_get( 'bot_account' )) echo "checked"; ?> /> <?php echo plugin_lang_get( 'bot_account' )?> <br>
+      <input type="text" name="bot_account_token" value="<?php echo plugin_config_get( 'bot_account_icon' )?>" />
+    </td>
+  </tr>
+
+  <tr>
+    <td class="category">
       <?php echo plugin_lang_get( 'notifications' )?>
     </td>
     <td colspan="2">

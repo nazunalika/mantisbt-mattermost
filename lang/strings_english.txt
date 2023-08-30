@@ -28,6 +28,7 @@ $s_plugin_Mattermost_url_webhook_test_text = 'Is this thing on? :thinkeyes:';
 $s_plugin_Mattermost_url_webhooks = 'Additional Mattermost Webhook URLs';
 $s_plugin_Mattermost_bot_name = 'Mattermost Bot Name';
 $s_plugin_Mattermost_bot_icon = 'Mattermost Bot Icon';
+$s_plugin_Mattermost_bot_account = 'Mattermost Bot Account';
 $s_plugin_Mattermost_notifications = 'Notification Settings';
 $s_plugin_Mattermost_notification_bug_report = 'Notify on: issue added';
 $s_plugin_Mattermost_notification_bug_update = 'Notify on: issue edited';

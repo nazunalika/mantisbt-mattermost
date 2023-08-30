@@ -61,6 +61,13 @@ config_set_if_needed( 'notification_bugnote_add' , gpc_get_bool( 'notification_b
 config_set_if_needed( 'notification_bugnote_edit' , gpc_get_bool( 'notification_bugnote_edit' ) );
 config_set_if_needed( 'notification_bugnote_deleted' , gpc_get_bool( 'notification_bugnote_deleted' ) );
 
+/* This adds support for bot accounts and not web hooks. There are instances,
+ * where for example if mattermost is bridged with IRC, the webhook shows up as
+ * the user who added to the webhook integration.
+ */
+config_set_if_needed( 'bot_account' , gpc_get_bool( 'bot_account' ) );
+config_set_if_needed( 'bot_account_token', gpc_get_string( 'bot_account_token' ) );
+
 form_security_purge( 'plugin_Mattermost_config' );
 
 html_operation_successful( $t_redirect_url );
