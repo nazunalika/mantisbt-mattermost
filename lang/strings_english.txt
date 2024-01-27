@@ -50,7 +50,7 @@ $s_plugin_Mattermost_bugnote_created = '[%s] A comment was made by %s on <%s|%s>
 $s_plugin_Mattermost_bugnote_updated = '[%s] %s edited a comment on <%s|%s> with:';
 $s_plugin_Mattermost_bugnote_deleted = '[%s] %s deleted a comment on <%s|%s>';
 $s_plugin_Mattermost_no_user = '(nobody)';
-$s_plugin_Mattermost_unknown_field = '(I don\'t know how to render the field '%s')';
+$s_plugin_Mattermost_unknown_field = '(I don\'t know how to render the field "%s")';
 $s_plugin_Mattermost_skip = 'Skip Mattermost Notification';
 $s_plugin_Mattermost_action_update = 'Update';
 
