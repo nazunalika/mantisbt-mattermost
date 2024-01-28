@@ -25,7 +25,7 @@ class MattermostPlugin extends MantisPlugin {
         $this->name = plugin_lang_get( 'title' );
         $this->description = plugin_lang_get( 'description' );
         $this->page = 'config_page';
-        $this->version = '1.0.0';
+        $this->version = '1.0.1';
         $this->requires = array(
             'MantisCore' => '2.0.0',
         );
@@ -68,7 +68,6 @@ class MattermostPlugin extends MantisPlugin {
                 'description',
                 'notes',
             ),
-
             'notification_bug_report' => true,
             'notification_bug_update' => true,
             'notification_bug_deleted' => true,
@@ -197,7 +196,7 @@ class MattermostPlugin extends MantisPlugin {
 
     function get_text_attachment($text) {
         $attachment = array('color' => '#3AA3E3', 'mrkdwn_in' => array('pretext', 'text', 'fields'));
-        $attachment['fallback'] = text . "\n";
+        $attachment['fallback'] = $text . "\n";
         $attachment['text'] = $text;
         return $attachment;
     }
@@ -330,7 +329,7 @@ class MattermostPlugin extends MantisPlugin {
 
         $ch = curl_init();
         // @see https://my.mattermost.com/services/new/incoming-webhook
-        // remove istance and token and add plugin_Mattermost_url config , see configurations with url above
+        // remove instance and token and add plugin_Mattermost_url config , see configurations with url above
         $url = sprintf('%s', trim($webhook));
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
